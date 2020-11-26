@@ -24,9 +24,10 @@ public class ClientController {
     @PostMapping
     public ResponseEntity<?> createUser(@RequestBody ClientDTO clientDTO){
         Client client = this.clientService.createClient(clientDTO);
-
+        if(client == null){
+            return new ResponseEntity<>("Email já em uso", HttpStatus.CONFLICT);
+        }
         return new ResponseEntity<>(client, HttpStatus.CREATED);
-
     }
 
 }

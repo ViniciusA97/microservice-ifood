@@ -13,5 +13,7 @@ public class ClientDTO {
     private String password;
     private String name;
 
+    private AddressDTO address;
+
 
 }

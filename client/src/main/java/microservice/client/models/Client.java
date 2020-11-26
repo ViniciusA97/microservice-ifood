@@ -2,10 +2,7 @@ package microservice.client.models;
 
 import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
@@ -15,19 +12,28 @@ import java.io.Serializable;
 @NoArgsConstructor
 @ToString
 @Builder
+@RequiredArgsConstructor
 public class Client implements Serializable {
 
-    @Id
+    @Id @GeneratedValue
     private long id;
 
-    @Column
+    @Column @NonNull
     private String name;
 
     @OneToOne()
     private Address address;
 
-    @OneToOne
-    private User user;
+    @Column(unique = true) @NonNull
+    private String email;
 
+    @Column(nullable = false) @NonNull
+    private String password;
 
+    public Client(@NonNull String name, Address address, @NonNull String email, @NonNull String password) {
+        this.name = name;
+        this.address = address;
+        this.email = email;
+        this.password = password;
+    }
 }

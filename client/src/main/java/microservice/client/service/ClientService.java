@@ -2,9 +2,8 @@ package microservice.client.service;
 
 import lombok.extern.slf4j.Slf4j;
 import microservice.client.DTO.ClientDTO;
-import microservice.client.DTO.UserDTO;
+import microservice.client.models.Address;
 import microservice.client.models.Client;
-import microservice.client.models.User;
 import microservice.client.repository.ClientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,23 +16,30 @@ public class ClientService {
     private ClientRepository clientRepository;
 
     @Autowired
-    private UserService userService;
+    private AddressService addressService;
 
     public Client createClient(ClientDTO clientDTO){
 
-        UserDTO userDTO = new UserDTO(clientDTO.getEmail(), clientDTO.getPassword());
-        User user = this.userService.createUser(userDTO);
+        Address address = null;
 
-        Client client = Client.builder().name(clientDTO.getName())
-                .user(user).build();
+        if(clientDTO.getAddress()!=null){
+            address = this.addressService.createAddress(clientDTO.getAddress());
+        }
+
+        Client client = new Client(clientDTO.getName(),
+                address,
+                clientDTO.getEmail(),
+                clientDTO.getPassword());
 
         try{
             this.clientRepository.save(client);
+            return client;
         }catch (Exception e){
-            log.info(e.getMessage());
+            log.info("EXCEPTION ON CLIENT: "+e.getMessage());
+            return null;
         }
-
-        return client;
     }
+
+
 
 }

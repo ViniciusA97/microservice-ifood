@@ -15,19 +15,24 @@ import java.io.Serializable;
 @NoArgsConstructor
 @ToString
 @Builder
+@RequiredArgsConstructor
 public class Address implements Serializable {
 
     @Id @GeneratedValue
     private long id;
 
-    @Column(nullable = false)
+    @Column(nullable = false) @NonNull
     private String address;
 
-    @Column(nullable = false)
+    @Column(nullable = false) @NonNull
     private String cep;
 
-    @Column(nullable = true)
+    @Column(nullable = true) @NonNull
     private String complemento;
+
+
+
+
 
 
 
