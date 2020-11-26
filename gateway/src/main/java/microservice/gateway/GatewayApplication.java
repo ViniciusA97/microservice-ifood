@@ -1,8 +1,10 @@
 package microservice.gateway;
 
+import io.github.resilience4j.circuitbreaker.CircuitBreakerRegistry;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.circuitbreaker.resilience4j.ReactiveResilience4JCircuitBreakerFactory;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.gateway.route.RouteLocator;
 import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
@@ -20,6 +22,13 @@ public class GatewayApplication {
 	}
 
 	@Bean
+	public ReactiveResilience4JCircuitBreakerFactory reactiveResilience4JCircuitBreakerFactory(CircuitBreakerRegistry circuitBreakerRegistry) {
+		ReactiveResilience4JCircuitBreakerFactory reactiveResilience4JCircuitBreakerFactory = new ReactiveResilience4JCircuitBreakerFactory();
+		reactiveResilience4JCircuitBreakerFactory.configureCircuitBreakerRegistry(circuitBreakerRegistry);
+		return reactiveResilience4JCircuitBreakerFactory;
+	}
+
+	@Bean
 	public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
 		log.info("lb://CLIENT");
 		return builder.routes()
@@ -27,10 +36,6 @@ public class GatewayApplication {
 						.filters(f -> f.rewritePath("/discovery", ""))
 						.uri("http://localhost:8081")
 						.id("discovery-service"))
-				.route(r -> r.path("/client/**")
-						.filters(f -> f.rewritePath("/client", ""))
-						.uri("http://localhost:8082")
-						.id("client-service"))
 				.build();
 	}
 
