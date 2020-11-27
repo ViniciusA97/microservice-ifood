@@ -33,5 +33,14 @@ public class RestaurantController {
         return new ResponseEntity<>(restaurants, HttpStatus.OK);
     }
 
+    @GetMapping(path = "/{id}")
+    private ResponseEntity<?> getById(@PathVariable long id){
+        Restaurant restaurant = this.restaurantService.getById(id);
+        if(restaurant==null){
+            return new ResponseEntity<>("Restaurant not found", HttpStatus.BAD_REQUEST);
+        }
+        return new ResponseEntity<>(restaurant, HttpStatus.OK);
+    }
+
 
 }

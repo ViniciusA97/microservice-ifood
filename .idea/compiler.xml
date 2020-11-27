@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="client" />
+        <module name="plates" />
         <module name="gateway" />
         <module name="discovery" />
         <module name="restaurant" />
@@ -19,6 +20,7 @@
       <module name="discovery" target="1.8" />
       <module name="gateway" target="1.8" />
       <module name="ifood" target="1.8" />
+      <module name="plates" target="1.8" />
       <module name="restaurant" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -28,6 +30,7 @@
       <module name="client-ifood" options="-parameters" />
       <module name="discovery" options="-parameters" />
       <module name="gateway" options="-parameters" />
+      <module name="plates" options="-parameters" />
       <module name="restaurant" options="-parameters" />
     </option>
   </component>

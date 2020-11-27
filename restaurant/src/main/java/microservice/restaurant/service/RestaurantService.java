@@ -46,4 +46,9 @@ public class RestaurantService {
         return restaurantList;
     }
 
+    public Restaurant getById(long id){
+        Restaurant restaurant = this.restaurantRepository.getById(id);
+        return restaurant;
+    }
+
 }
