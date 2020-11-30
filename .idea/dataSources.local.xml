@@ -15,6 +15,7 @@
             <name qname="@" />
             <name qname="microservice_client" />
             <name qname="microservice_restaurant" />
+            <name qname="microservice_plate" />
           </node>
         </introspection-scope>
       </schema-mapping>

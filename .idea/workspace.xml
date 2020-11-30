@@ -23,9 +23,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="406ffb0e-58c9-4d1e-9dd9-b550cb25270a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/restaurant/src/main/java/microservice/restaurant/controller/RestaurantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant/src/main/java/microservice/restaurant/controller/RestaurantController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/restaurant/src/main/java/microservice/restaurant/service/RestaurantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant/src/main/java/microservice/restaurant/service/RestaurantService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plates/src/main/java/microservices/plates/model/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/plates/src/main/java/microservices/plates/model/Restaurant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plates/src/main/java/microservices/plates/service/RestaurantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/plates/src/main/java/microservices/plates/service/RestaurantService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/restaurant/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +173,8 @@
       <workItem from="1606325842883" duration="1204000" />
       <workItem from="1606396092809" duration="9078000" />
       <workItem from="1606480715423" duration="21000" />
-      <workItem from="1606492242356" duration="313000" />
+      <workItem from="1606492242356" duration="2355000" />
+      <workItem from="1606739876071" duration="8006000" />
     </task>
     <servers />
   </component>
@@ -209,10 +212,10 @@
     </state>
     <state x="254" y="85" width="1092" height="738" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860@0.0.1600.860" timestamp="1606230725891" />
     <state x="365" y="46" width="1262" height="1034" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1606306808437" />
-    <state x="804" y="272" width="374" height="569" key="#com.intellij.ide.util.MemberChooser" timestamp="1606403162119">
+    <state x="804" y="272" width="374" height="569" key="#com.intellij.ide.util.MemberChooser" timestamp="1606494224436">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="804" y="272" width="374" height="569" key="#com.intellij.ide.util.MemberChooser/72.27.1848.1053@72.27.1848.1053" timestamp="1606403162119" />
+    <state x="804" y="272" width="374" height="569" key="#com.intellij.ide.util.MemberChooser/72.27.1848.1053@72.27.1848.1053" timestamp="1606494224436" />
     <state x="566" y="173" width="747" height="668" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1606239435731">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
@@ -296,11 +299,11 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="479" y="131" width="1024" height="852" key="SettingsEditor/72.27.1848.1053@72.27.1848.1053" timestamp="1606241927512" />
-    <state x="879" y="403" width="196" height="251" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1606396775353">
+    <state x="879" y="403" width="196" height="251" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1606492806728">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="699" y="307" key="com.intellij.database.actions.DdlActions$CreateObject$1/0.0.1600.860@0.0.1600.860" timestamp="1606145064245" />
-    <state x="879" y="403" width="196" height="251" key="com.intellij.database.actions.DdlActions$CreateObject$1/72.27.1848.1053@72.27.1848.1053" timestamp="1606396775353" />
+    <state x="879" y="403" width="196" height="251" key="com.intellij.database.actions.DdlActions$CreateObject$1/72.27.1848.1053@72.27.1848.1053" timestamp="1606492806728" />
     <state x="804" y="415" width="332" height="244" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1606398332629">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
